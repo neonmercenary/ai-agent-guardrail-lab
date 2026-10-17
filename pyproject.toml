@@ -8,4 +8,5 @@ dependencies = [
     "fastapi>=0.143.3",
     "pydantic>=2.14.1",
     "pydantic-settings>=2.15.0",
+    "pytest>=9.1.1",
 ]
