@@ -1,0 +1,29 @@
+# Use official lightweight Python image
+FROM python:3.10-slim
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install uv for high-speed package management
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uv-bin/uv
+ENV PATH="/uv-bin:$PATH"
+
+# Copy dependency specifications first to leverage caching
+COPY pyproject.toml uv.lock ./
+
+# Install dependencies without virtual environment inside container
+RUN uv sync --frozen --no-dev
+
+# Copy application source code
+COPY . .
+
+# Expose FastAPI port
+EXPOSE 8000
+
+# Run FastAPI via uvicorn
+CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
