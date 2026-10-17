@@ -99,5 +99,3 @@ Or deploy instantly via Docker Compose:
 docker compose up --build
 
 ```
-
-```
