@@ -2,7 +2,7 @@
 
 A lightweight, deterministic security middleware and testing harness designed to protect AI agents from prompt injection, unauthorized tool execution, and secret disclosures.
 
-![CI Test Suite](https://github.com/neonmercenary/agent-guardrail-lab/actions/workflows/test.yml/badge.svg)
+![CI Test Suite](actions/workflows/test.yml/badge.svg)
 
 ---
 
