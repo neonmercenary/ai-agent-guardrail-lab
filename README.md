@@ -2,7 +2,7 @@
 
 A lightweight, deterministic security middleware and testing harness designed to protect AI agents from prompt injection, unauthorized tool execution, and secret disclosures.
 
-![CI Test Suite](https://github.com/your-username/agent-guardrail-lab/actions/workflows/test.yml/badge.svg)
+![CI Test Suite](https://github.com/neonmercenary/agent-guardrail-lab/actions/workflows/test.yml/badge.svg)
 
 ---
 
@@ -71,7 +71,7 @@ The middleware intercepts incoming requests before they reach the core agent or 
 Using modern Python packaging (`uv`):
 
 ```bash
-git clone [https://github.com/your-username/agent-guardrail-lab.git](https://github.com/your-username/agent-guardrail-lab.git)
+git clone [https://github.com/neonmercenary/agent-guardrail-lab.git](https://github.com/neonmercenary/agent-guardrail-lab.git)
 cd agent-guardrail-lab
 uv sync
 
